@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GetGifs } from '../helpers/GetGifs';
+import { getGifs } from '../helpers/getGifs';
 
 export const useFetchGifs = (category) => {
 
@@ -8,7 +8,7 @@ export const useFetchGifs = (category) => {
 
     const getImages =
         async () => {
-            const newImages = await GetGifs(category);
+            const newImages = await getGifs(category);
             setimages(newImages);
             setIsLoading(false);
         }
